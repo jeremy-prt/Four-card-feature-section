@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  --Very_Dark_Blue: hsl(234, 12%, 34%);
+  --Grayish_Blue: hsl(229, 6%, 66%);
+  --Very_Light_Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  background-color: var(--Very_Light_Gray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 30px;
+  gap: 0.6em;
+}
+
+header h1 {
+  font-weight: 300;
+  color: var(--Grayish_Blue);
+  font-size: 1.6em;
+}
+
+header h1 span {
+  font-weight: 600;
+  color: var(--Very_Dark_Blue);
+  position: relative;
+  top: -10px;
+}
+
+header p {
+  color: var(--Grayish_Blue);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 50px 30px;
+  row-gap: 1.7em;
+}
+
+.container {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  max-width: 310px;
+}
+
+.container .content {
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.container h2 {
+  color: var(--Very_Dark_Blue);
+}
+
+.container p {
+  font-size: 13px;
+  color: var(--Grayish_Blue);
+}
+
+.container .icon {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.container .icon img {
+  width: 50px;
+}
+
+@media screen and (min-width: 750px) {
+  main {
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+  }
+  header p {
+    width: 43%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    max-width: 1300px;
+    margin: auto;
+  }
+
+  .container.mid {
+    transform: translateY(50%);
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+}
+
+.container:nth-child(1) {
+  border-top: 3px solid var(--Cyan);
+}
+.container:nth-child(2) {
+  border-top: 3px solid var(--Red);
+}
+.container:nth-child(3) {
+  border-top: 3px solid var(--Orange);
+}
+.container:nth-child(4) {
+  border-top: 3px solid var(--Blue);
+}
